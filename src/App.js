@@ -145,9 +145,9 @@ function App() {
               </div>
               <div class="text-center bg-gray-900 pt-10 w-full ">
                 <p class="mb-4  text-gray-300">
-                  Developed by
+                  Developed for
                   <span class="p-2 text-yellow-300">
-                      i-Novotek
+                      MLH Fellowship
                   </span>
                 </p>
               </div>
