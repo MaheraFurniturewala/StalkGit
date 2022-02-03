@@ -13,7 +13,7 @@ function App() {
             </div>
 
             <h2 class="mt-10 mb-5 text-5xl font-bold font-heading text-indigo-300">
-              GitHub Finder
+              StalkGit
             </h2>
             <div className="mt-1 flex justify-center">
               {/* input */}
