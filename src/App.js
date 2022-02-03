@@ -16,6 +16,15 @@ function App() {
     dispatch(fetchProfileAction(user));
     dispatch(fetchReposAction(user));
   }, [dispatch]);
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      console.log('do validate')
+      dispatch(fetchProfileAction(user));
+      dispatch(fetchReposAction(user));
+    }
+  }
+
   return (
     <>
       <section class="relative 2xl bg-gray-800 min-h-screen">
@@ -34,6 +43,7 @@ function App() {
             <div className="mt-1 flex justify-center">
               <input
                 onChange={e => setUser(e.target?.value)}
+                onKeyDown={handleKeyDown}
                 value={user}
                 type="text"
                 name="email"
@@ -114,7 +124,7 @@ function App() {
                         <a
                           target="_blank"
                           class="inline-block px-12 py-4 border border-gray-300 hover:border-gray-200 rounded-full font-bold text-white"
-                          href={profile?.html_url}
+                          href={profile?.html_url} rel="noreferrer"
                         >
                           View Profile
                         </a>
