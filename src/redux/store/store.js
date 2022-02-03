@@ -1,7 +1,9 @@
-import { configureStore } from '@reduxjs/toolkit';
-
+import { configureStore } from "@reduxjs/toolkit";
+import repos from "../slices/githubReposAndUserSlicer";
 const store = configureStore({
-    reducer: {},
+  reducer: {
+    repos,
+  },
 });
 
 export default store;
