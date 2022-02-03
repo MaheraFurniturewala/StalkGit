@@ -131,7 +131,7 @@ function App() {
                             <a
                               target="_blank"
                               href={repo?.html_url}
-                              class="text-lg  text-indigo-400"
+                              class="text-lg  text-indigo-400" rel="noreferrer"
                             >
                               {repo?.name}
                             </a>
@@ -147,30 +147,9 @@ function App() {
                 <p class="mb-4  text-gray-300">
                   Developed by
                   <span class="p-2 text-yellow-300">
-                    <a href="https://www.youtube.com/channel/UCvu6J9q1AM6q4xysGqAvVyw">
                       i-Novotek
-                    </a>
                   </span>
                 </p>
-                <a
-                  class="inline-flex text-blue-400 hover:text-blue-500 font-bold"
-                  href="https://www.youtube.com/channel/UCvu6J9q1AM6q4xysGqAvVyw"
-                >
-                  <span className="mb-10">Watch the tutorial</span>
-                  <svg
-                    class="ml-4 w-4 h-5"
-                    width="19"
-                    height="20"
-                    viewBox="0 0 19 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M18.7383 1.47342L18.7383 10.9304L17.5562 10.9304L17.5562 2.89788L0.834948 19.625L0.00154682 18.7916L16.7228 2.06448L9.28125 2.06448L9.28125 0.882355L18.1472 0.882355C18.4737 0.882355 18.7383 1.14697 18.7383 1.47342Z"
-                      fill="#1F40FF"
-                    ></path>
-                  </svg>
-                </a>
               </div>
             </div>
           )}
