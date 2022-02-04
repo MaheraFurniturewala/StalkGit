@@ -12,7 +12,9 @@
 
 # Application images
 ## Landing Page
-![image]()
+![image](./src/img/landing1.png)
+
+![image](./src/img/landing2.png)
 
 # Inspiration ✨
 We see github Users  with more than 500 projects and there were more than 100/200/1000 open issues in each of them, So we think that the platform which helps them to organize the issues and see new ones will be great.Not only for them, but also for open source Contributors, who want to contribute for big repositories.
@@ -23,12 +25,10 @@ We see github Users  with more than 500 projects and there were more than 100/20
 # Key features 💡
 
 ## Curent 
-For now our demo application contains single-page web site where it is possible to simple find the user, information on Github and all of repositories.
+For now our demo application contains a single-page web site where it is possible to simply find the users information on Github and all of the users repositories.
 
 ## Future plans
-As we mentioned , Our purpose is to make Open-Source developer's life easier. So, on our website besides current features, we are going to add open issues managemenet system.It will be a possible to find User with some tags (like language , datetime). Open source developer can find all of the open issues on her/his or someone else profile with some filtered options (most common datetime option). So, it will be possible to easily check all of the new issues. 
-
-# Novelty 💎
+As we mentioned , Our purpose is to make an Open-Source developer's life easier. So, on our website besides the current features, we are going to add open issues managemenet system.It will be possible to find a User with some tags (like Language , Datetime, University, Organization, stars etc). Open source developers can find all of the open issues on her/his profile or an organizations page with some filtered options (most common datetime option). So, it will be possible to easily check all of the new issues. 
 
 # Tech Stack 📚
 
@@ -36,11 +36,11 @@ As we mentioned , Our purpose is to make Open-Source developer's life easier. So
 - React
 - React-Redux Toolkit
 - Tailwind CSS
-- Git, Github
 
 # Future scope's technical description📈
 
-We are using Gihub API. For now Githuბ API doesn't contains kind of request options we need. 
+We are using Gihub API. As of now the API does not have a direct end-point that meet our applications requirement hence the lists obtained after hitting several end-points will have to be filtered out.
+
 ## Finding all of the open issues 
  After finding all of the open repositories with :  
  ``` javascript
@@ -63,6 +63,6 @@ const res = await Promise.allSettled(promiseArr)
 .filter(<possible filters with date and repository language and etc>)
 
  ```
-In that way we will find all issues inside repos and write helfuL UI/UX for this add on.
+In that way we will find all issues inside repos and write relevant UI/UX for this add on.
 
 
