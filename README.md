@@ -5,8 +5,8 @@
 
 # Important Links  
  
-- [Link to website]()
-- [Demo Video]()
+- [Link to website](https://stalkgit.netlify.app/)
+- [Demo Video](https://youtu.be/HhOZd4DcJlI)
 
 </strong> 
 
