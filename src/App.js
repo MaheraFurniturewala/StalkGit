@@ -22,6 +22,7 @@ function App() {
       console.log('do validate')
       dispatch(fetchProfileAction(user));
       dispatch(fetchReposAction(user));
+      console.log(repos)
     }
   }
 
@@ -56,7 +57,7 @@ function App() {
           {loading ? (
             <h1 class="text-green-300 text-3xl text-center">Loading</h1>
           ) : error ? (
-            <h1 class="text-red-500 text-lg text-center">{error?.data.message}</h1>
+            <h1 class="text-red-500 text-lg text-center">wrong username, can you try again?</h1>
           ) : (
             <div class="max-w-4xl mx-auto">
               <div class="flex flex-wrap -mx-4 mb-20">
