@@ -27,7 +27,7 @@ function App() {
 
   return (
     <>
-      <section class="relative 2xl bg-gray-800 min-h-screen">
+      <section class="relative 2xl bg-gray-900 min-h-screen">
         <div class="relative container px-4 mx-auto">
           <div class="text-center mb-20">
             {/* <span class="text-lg text-blue-400 font-bold">
@@ -38,7 +38,7 @@ function App() {
             </div>
 
             <h2 class="mt-10 mb-5 text-5xl font-bold font-heading text-indigo-300">
-              GitHub Finder
+              StalkGit
             </h2>
             <div className="mt-1 flex justify-center">
               <input
