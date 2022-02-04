@@ -12,10 +12,12 @@ function App() {
   const repos = useSelector(state => state?.repos);
   const { loading, profileLoading, reposList, profile, error } = repos;
   const dispatch = useDispatch();
+
   useEffect(() => {
     dispatch(fetchProfileAction(user));
     dispatch(fetchReposAction(user));
   }, [dispatch]);
+  
   return (
     <>
       <section class="relative 2xl bg-gray-800 min-h-screen">
