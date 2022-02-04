@@ -65,4 +65,11 @@ const res = await Promise.allSettled(promiseArr)
  ```
 In that way we will find all issues inside repos and write relevant UI/UX for this add on.
 
+## Instructions
 
+1. `https://github.com/MaheraFurniturewala/StalkGit.git` 
+2. `cd ./StalkGit`
+3. Install node dependencies 
+   - `npm install`
+5. `npm start`
+6. The app is now running at http://localhost:3000/ 
