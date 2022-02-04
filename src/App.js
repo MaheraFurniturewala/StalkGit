@@ -16,9 +16,19 @@ function App() {
     dispatch(fetchProfileAction(user));
     dispatch(fetchReposAction(user));
   }, [dispatch]);
+
+  const handleKeyDown = (event) => {
+    if (event.key === 'Enter') {
+      console.log('do validate')
+      dispatch(fetchProfileAction(user));
+      dispatch(fetchReposAction(user));
+      console.log(repos)
+    }
+  }
+
   return (
     <>
-      <section class="relative 2xl bg-gray-800 min-h-screen">
+      <section class="relative 2xl bg-gray-900 min-h-screen">
         <div class="relative container px-4 mx-auto">
           <div class="text-center mb-20">
             {/* <span class="text-lg text-blue-400 font-bold">
@@ -29,11 +39,12 @@ function App() {
             </div>
 
             <h2 class="mt-10 mb-5 text-5xl font-bold font-heading text-indigo-300">
-              GitHub Finder
+              StalkGit
             </h2>
             <div className="mt-1 flex justify-center">
               <input
                 onChange={e => setUser(e.target?.value)}
+                onKeyDown={handleKeyDown}
                 value={user}
                 type="text"
                 name="email"
@@ -46,7 +57,7 @@ function App() {
           {loading ? (
             <h1 class="text-green-300 text-3xl text-center">Loading</h1>
           ) : error ? (
-            <h1 class="text-red-500 text-lg text-center">{error?.data.message}</h1>
+            <h1 class="text-red-500 text-lg text-center">wrong username, can you try again?</h1>
           ) : (
             <div class="max-w-4xl mx-auto">
               <div class="flex flex-wrap -mx-4 mb-20">
@@ -114,7 +125,7 @@ function App() {
                         <a
                           target="_blank"
                           class="inline-block px-12 py-4 border border-gray-300 hover:border-gray-200 rounded-full font-bold text-white"
-                          href={profile?.html_url}
+                          href={profile?.html_url} rel="noreferrer"
                         >
                           View Profile
                         </a>
@@ -131,7 +142,7 @@ function App() {
                             <a
                               target="_blank"
                               href={repo?.html_url}
-                              class="text-lg  text-indigo-400"
+                              class="text-lg  text-indigo-400" rel="noreferrer"
                             >
                               {repo?.name}
                             </a>
@@ -145,32 +156,11 @@ function App() {
               </div>
               <div class="text-center bg-gray-900 pt-10 w-full ">
                 <p class="mb-4  text-gray-300">
-                  Developed by
+                  Developed for
                   <span class="p-2 text-yellow-300">
-                    <a href="https://www.youtube.com/channel/UCvu6J9q1AM6q4xysGqAvVyw">
-                      i-Novotek
-                    </a>
+                      MLH Fellowship
                   </span>
                 </p>
-                <a
-                  class="inline-flex text-blue-400 hover:text-blue-500 font-bold"
-                  href="https://www.youtube.com/channel/UCvu6J9q1AM6q4xysGqAvVyw"
-                >
-                  <span className="mb-10">Watch the tutorial</span>
-                  <svg
-                    class="ml-4 w-4 h-5"
-                    width="19"
-                    height="20"
-                    viewBox="0 0 19 20"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                  >
-                    <path
-                      d="M18.7383 1.47342L18.7383 10.9304L17.5562 10.9304L17.5562 2.89788L0.834948 19.625L0.00154682 18.7916L16.7228 2.06448L9.28125 2.06448L9.28125 0.882355L18.1472 0.882355C18.4737 0.882355 18.7383 1.14697 18.7383 1.47342Z"
-                      fill="#1F40FF"
-                    ></path>
-                  </svg>
-                </a>
               </div>
             </div>
           )}

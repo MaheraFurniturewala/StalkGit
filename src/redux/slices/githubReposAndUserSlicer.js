@@ -12,7 +12,7 @@ export const fetchReposAction = createAsyncThunk(
     try {
       const { data } = await axios.get(
         `https://api.github.com/users/${user}/repos?per_page=700&sort=asc`,
-       
+
       );
 
       return data;
@@ -31,7 +31,7 @@ export const fetchProfileAction = createAsyncThunk(
     try {
       const { data } = await axios.get(
         `https://api.github.com/users/${user}`,
-        
+
       );
 
       return data;
