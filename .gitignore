@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 .npmrc
+<<<<<<< HEAD
+=======
+
+>>>>>>> fix-functionality
 # testing
 /coverage
 
